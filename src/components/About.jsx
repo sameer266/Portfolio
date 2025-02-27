@@ -143,7 +143,7 @@ const About = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <FaDownload /> Download Resume
+              <FaDownload /> View Resume
             </motion.a>
           </div>
         </div>
