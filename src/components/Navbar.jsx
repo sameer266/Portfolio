@@ -9,6 +9,13 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation(); // Get current path
 
+  useEffect(() => {
+    // Close menu when navigating & restore scrolling
+    setMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  }, [location.pathname]); // Runs when the path changes
+  
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
