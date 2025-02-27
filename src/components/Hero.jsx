@@ -4,7 +4,7 @@ import { FaDownload, FaArrowRight } from 'react-icons/fa';
 import { DiReact, DiPython } from 'react-icons/di'; // React and Python icons
 import { SiDjango } from 'react-icons/si'; // Django icon
 import '../assets/styles/hero.css';
-import ProfileImage from '../assets/images/profile-image.jpg';
+import ProfileImage from '../assets/images/profile.png';
 import CV  from '../assets/CV.pdf';
 
 const Hero = () => {
@@ -145,7 +145,7 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.1, duration: 0.6 }}
           >
-           I’m a full-stack developer skilled in <SiDjango className="icon" /> Django (backend) and <DiReact className="icon" /> React + Tailwind (frontend). I specialize in real-time web apps with WebSockets & Celery, and integrate AI with TensorFlow & PyTorch. <DiPython className="icon" />
+           I’m a full-stack developer skilled in <SiDjango className="icon" /> Django (backend) and <DiReact className="icon" /> React + Tailwind (frontend). I specialize in real-time web apps with WebSockets & Celery, and integrate AI with Langchain and Ollama. <DiPython className="icon" />
 
           </motion.p>
 
