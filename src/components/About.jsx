@@ -9,13 +9,16 @@ const About = () => {
   // Skills data
   const skills = [
     { name: 'JavaScript', level: 90 },
-    { name: 'React', level: 85 },
-    { name: 'HTML/CSS', level: 95 },
+    { name: 'React JS', level: 85 },
+    { name: 'HTML/CSS/Tailwind', level: 95 },
+    { name: 'Python', level: 85 },
     { name: 'Django', level: 80 },
     { name: 'Security', level: 75 },
     { name: 'Node.js', level: 70 },
-    { name: 'Python', level: 85 },
-    { name: 'ML', level: 50 }
+    { name : 'Web Security', level: 60},
+    { name :'Flutter' , level :40},
+    {name :'Docker', level:50},
+    { name: 'ML', level: 30 }
   ];
 
   // Services data
