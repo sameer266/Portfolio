@@ -6,6 +6,7 @@ import { SiDjango } from 'react-icons/si'; // Django icon
 import '../assets/styles/hero.css';
 import ProfileImage from '../assets/images/profile.png';
 import CV  from '../assets/CV.pdf';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -160,8 +161,10 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View My Work <FaArrowRight className="btn-icon" />
+               <Link to="/projects" style={{textDecoration:"none" ,color:"white"}}>
+              View My Work </Link> <FaArrowRight className="btn-icon" />
             </motion.button>
+            
             
             <motion.a 
               href={CV}
@@ -170,8 +173,10 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Download CV <FaDownload className="btn-icon" />
+            
+              Download CV   <FaDownload className="btn-icon" />
             </motion.a>
+         
           </motion.div>
         </motion.div>
         

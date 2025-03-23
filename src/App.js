@@ -7,6 +7,8 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ChatBot from './components/ChatBot'
+import BotpressChat from './components/ChatBot';
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <BotpressChat/>
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
