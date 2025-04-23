@@ -1,17 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FaGraduationCap, FaBriefcase, FaCode, FaNetworkWired, FaDocker, FaLock, 
-  FaMobile, FaShieldAlt, FaBug, FaWifi, FaUserSecret, 
+import {
+  FaGraduationCap, FaBriefcase, FaCode, FaNetworkWired, FaDocker,
+  FaLock, FaMobile, FaShieldAlt, FaBug, FaWifi, FaUserSecret,
+  FaPython, FaJsSquare, FaReact, FaRobot, FaMobileAlt
 } from 'react-icons/fa';
-import { 
-  SiPython, SiDjango, SiReact, SiTensorflow, SiFlutter, 
-  SiOpenai, SiWireshark, SiKalilinux, SiMetasploit 
-} from 'react-icons/si';
-
 
 import '../assets/styles/about.css';
-
 
 const About = () => {
   const containerVariants = {
@@ -96,38 +91,35 @@ const About = () => {
       ]
     }
   ];
+
   const skills = [
-    { Icon: SiPython, name: "Python", level: "Advanced" },
-    { Icon: SiDjango, name: "Django", level: "Advanced" },
-    { Icon: SiReact, name: "React", level: "Advanced" },
-    { Icon: SiFlutter, name: "Flutter", level: "Intermediate" },
-    { Icon: SiTensorflow, name: "Machine Learning", level: "Basic" },
-    { Icon: SiOpenai, name: "Langchain", level: "Intermediate" },
+    { Icon: FaPython, name: "Python", level: "Advanced" },
+    { Icon: FaJsSquare, name: "JavaScript", level: "Advanced" },
+    { Icon: FaReact, name: "React", level: "Advanced" },
+    { Icon: FaMobileAlt, name: "Flutter", level: "Intermediate" },
+    { Icon: FaRobot, name: "Machine Learning", level: "Basic" },
+    { Icon: FaCode, name: "Langchain", level: "Intermediate" },
     { Icon: FaDocker, name: "Docker", level: "Intermediate" },
     { Icon: FaNetworkWired, name: "Nmap", level: "Intermediate" },
-    { Icon: SiWireshark, name: "Wireshark", level: "Intermediate" },
-    { Icon: FaLock, name: "Burp Suite", level: "Intermediate" },  // Updated here
-    { Icon: SiMetasploit, name: "Metasploit", level: "Intermediate" },
-    { Icon: SiKalilinux, name: "Kali Linux", level: "Intermediate" },
+    { Icon: FaWifi, name: "Wireshark", level: "Intermediate" },
+    { Icon: FaLock, name: "Burp Suite", level: "Intermediate" },
+    { Icon: FaBug, name: "Metasploit", level: "Intermediate" },
+    { Icon: FaShieldAlt, name: "Kali Linux", level: "Intermediate" },
     { Icon: FaUserSecret, name: "Social Engineering", level: "Basic" },
-    { Icon: FaWifi, name: "Network Security", level: "Intermediate" },
+    { Icon: FaNetworkWired, name: "Network Security", level: "Intermediate" },
     { Icon: FaBug, name: "Penetration Testing", level: "Intermediate" }
   ];
-  
 
   return (
-    <motion.div 
+    <motion.div
       className="about-container"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <motion.div 
-        className="about-header"
-        variants={itemVariants}
-      >
+      <motion.div className="about-header" variants={itemVariants}>
         <h1>About Me</h1>
-        <motion.div 
+        <motion.div
           className="header-underline"
           initial={{ width: 0 }}
           animate={{ width: "100px" }}
@@ -135,27 +127,21 @@ const About = () => {
         />
       </motion.div>
 
-      <motion.p 
-        className="about-intro"
-        variants={itemVariants}
-      >
+      <motion.p className="about-intro" variants={itemVariants}>
         I'm a passionate full-stack developer with expertise in modern web technologies,
-        mobile development, and a growing interest in cybersecurity and machine learning. 
-        My diverse skill set spans from frontend development with React to backend solutions 
-        with Django, complemented by knowledge in network security, penetration testing, 
+        mobile development, and a growing interest in cybersecurity and machine learning.
+        My diverse skill set spans from frontend development with React to backend solutions
+        with Django, complemented by knowledge in network security, penetration testing,
         and ethical hacking tools.
       </motion.p>
 
-      <motion.div 
-        className="skills-grid"
-        variants={containerVariants}
-      >
+      <motion.div className="skills-grid" variants={containerVariants}>
         {skills.map((skill, index) => (
-          <motion.div 
+          <motion.div
             key={skill.name}
             className="skill-card"
             variants={itemVariants}
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
             }}
@@ -167,16 +153,13 @@ const About = () => {
         ))}
       </motion.div>
 
-      <motion.div 
-        className="experience-grid"
-        variants={containerVariants}
-      >
-        {experiences.map((section, index) => (
-          <motion.div 
+      <motion.div className="experience-grid" variants={containerVariants}>
+        {experiences.map((section) => (
+          <motion.div
             key={section.title}
             className="experience-card"
             variants={itemVariants}
-            whileHover={{ 
+            whileHover={{
               scale: 1.02,
               boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
             }}
@@ -187,23 +170,17 @@ const About = () => {
             </div>
             <div className="card-content">
               {section.items.map((item, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   className="content-item"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 + (i * 0.1) }}
+                  transition={{ delay: 0.3 + i * 0.1 }}
                 >
                   <h3>{item.title}</h3>
-                  {item.place && (
-                    <p className="place">{item.place}</p>
-                  )}
-                  {item.year && (
-                    <p className="year">{item.year}</p>
-                  )}
-                  {item.description && (
-                    <p className="description">{item.description}</p>
-                  )}
+                  {item.place && <p className="place">{item.place}</p>}
+                  {item.year && <p className="year">{item.year}</p>}
+                  {item.description && <p className="description">{item.description}</p>}
                 </motion.div>
               ))}
             </div>
