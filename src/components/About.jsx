@@ -1,10 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaBriefcase, FaCode, FaNetworkWired, FaDocker, FaLock, FaMobile, FaShieldAlt, FaBug, FaWifi, FaUserSecret, FaSearch, FaNetworkWired as FaNmap } from 'react-icons/fa';
-import { SiPython, SiDjango, SiReact, SiTensorflow, SiFlutter, SiPostman, SiOpenai, SiWireshark, SiKalilinux, SiMetasploit, SiBurpsuite } from 'react-icons/si';
+import { 
+  FaGraduationCap, FaBriefcase, FaCode, FaNetworkWired, FaDocker, FaLock, 
+  FaMobile, FaShieldAlt, FaBug, FaWifi, FaUserSecret, FaSearch 
+} from 'react-icons/fa';
+import { 
+  SiPython, SiDjango, SiReact, SiTensorflow, SiFlutter, SiPostman, 
+  SiOpenai, SiWireshark, SiKalilinux, SiMetasploit 
+} from 'react-icons/si';
+
+
 import '../assets/styles/about.css';
-import AboutImage from '../assets/images/about-image.png';
-import CV from '../assets/CV.pdf';
+
 
 const About = () => {
   const containerVariants = {
@@ -89,7 +96,6 @@ const About = () => {
       ]
     }
   ];
-
   const skills = [
     { Icon: SiPython, name: "Python", level: "Advanced" },
     { Icon: SiDjango, name: "Django", level: "Advanced" },
@@ -98,15 +104,16 @@ const About = () => {
     { Icon: SiTensorflow, name: "Machine Learning", level: "Basic" },
     { Icon: SiOpenai, name: "Langchain", level: "Intermediate" },
     { Icon: FaDocker, name: "Docker", level: "Intermediate" },
-    { Icon: FaNmap, name: "Nmap", level: "Intermediate" },
+    { Icon: FaNetworkWired, name: "Nmap", level: "Intermediate" },
     { Icon: SiWireshark, name: "Wireshark", level: "Intermediate" },
-    { Icon: SiBurpsuite, name: "Burp Suite", level: "Intermediate" },
+    { Icon: FaLock, name: "Burp Suite", level: "Intermediate" },  // Updated here
     { Icon: SiMetasploit, name: "Metasploit", level: "Intermediate" },
     { Icon: SiKalilinux, name: "Kali Linux", level: "Intermediate" },
     { Icon: FaUserSecret, name: "Social Engineering", level: "Basic" },
     { Icon: FaWifi, name: "Network Security", level: "Intermediate" },
     { Icon: FaBug, name: "Penetration Testing", level: "Intermediate" }
   ];
+  
 
   return (
     <motion.div 
