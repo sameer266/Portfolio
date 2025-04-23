@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   FaGraduationCap, FaBriefcase, FaCode, FaNetworkWired, FaDocker, FaLock, 
-  FaMobile, FaShieldAlt, FaBug, FaWifi, FaUserSecret, FaSearch 
+  FaMobile, FaShieldAlt, FaBug, FaWifi, FaUserSecret, 
 } from 'react-icons/fa';
 import { 
-  SiPython, SiDjango, SiReact, SiTensorflow, SiFlutter, SiPostman, 
+  SiPython, SiDjango, SiReact, SiTensorflow, SiFlutter, 
   SiOpenai, SiWireshark, SiKalilinux, SiMetasploit 
 } from 'react-icons/si';
 
